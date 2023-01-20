@@ -21,6 +21,16 @@ clothrouter.post("/user/cloth", async (req, res) => {
   }
 });
 
+clothrouter.get("/user/cloth",async(req,res)=>{
+  try {
+      const userdata= await UserModel.find()
+      res.send(userdata)
+  } catch (error) {
+      console.log(error)
+  }
+})
+
+
 
 
 
