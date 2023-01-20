@@ -2,23 +2,29 @@ const mongoose = require("mongoose");
 
 const UserSchema = mongoose.Schema({
   id: {
-    type: Number
-
+    type: Number,
+    require: true,
+    trim: true
   },
   img1:{
-    type:String
+    type:String,
+    required:true
   },
   img2:{
-    type:String
+    type:String,
+    required:true
   },
   title:{
-    type:String
+    type:String,
+    required:true
   },
   price: {
-    type: Number
+    type: Number,
+    require: true,
+    trim: true,
   }
 });
 
-const UserModel = mongoose.model("Cloth", UserSchema);
+const UserModel = mongoose.model("cloth", UserSchema);
 
 module.exports = UserModel;
